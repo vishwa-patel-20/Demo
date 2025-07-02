@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import api from '../../Services/api';
-
+import '../../index.css';
 interface Props {
   onAdd: () => void;
 }
@@ -29,7 +29,7 @@ const ExpenseForm: React.FC<Props> = ({ onAdd }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+    <div className="bg-red rounded-lg shadow-md p-6 mb-6">
       <h2 className="text-xl font-semibold mb-4">Add Expense</h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input className="input" name="title" placeholder="Title" value={formData.title} onChange={handleChange} required />
